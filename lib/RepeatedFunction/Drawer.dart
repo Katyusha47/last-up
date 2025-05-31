@@ -61,11 +61,7 @@ class _drawerfuncState extends State<drawerfunc> {
         onHttpError: (HttpResponseError error) {},
         onWebResourceError: (WebResourceError error) {},
         // onNavigationRequest: (NavigationRequest request) {
-        //   if (request.url.startsWith('https://www.youtube.com/')) {
-        //     return NavigationDecision.prevent;
-        //   }
-        //   return NavigationDecision.navigate;
-        // },
+        //  
       ),
     )
     ..loadRequest(Uri.parse('https://github.com/Katyusha47'));
@@ -82,11 +78,7 @@ class _drawerfuncState extends State<drawerfunc> {
         onHttpError: (HttpResponseError error) {},
         onWebResourceError: (WebResourceError error) {},
         // onNavigationRequest: (NavigationRequest request) {
-        //   if (request.url.startsWith('https://www.youtube.com/')) {
-        //     return NavigationDecision.prevent;
-        //   }
-        //   return NavigationDecision.navigate;
-        // },
+        //   
       ),
     )
     ..loadRequest(Uri.parse('https://github.com/Katyusha47'));
@@ -143,28 +135,8 @@ class _drawerfuncState extends State<drawerfunc> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => FavoriateMovies()));
             }),
-            listtilefunc('Github', FontAwesomeIcons.github,
-                ontap: () async {
-              //webview for blog
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Scaffold(
-                            backgroundColor: Color.fromRGBO(18, 18, 18, 0.5),
-                            appBar: AppBar(
-                              backgroundColor: Color.fromRGBO(18, 18, 18, 0.9),
-                              title: Text('Github'),
-                            ),
-                            body: WebViewWidget(controller: controllerone),
-                          )));
-            }),
             
-            listtilefunc('Subscribe US', FontAwesomeIcons.youtube,
-                ontap: () async {
-              var url =
-                  'https://www.youtube.com/channel/UCeJnnsTq-Lh9E16kCEK49rQ?sub_confirmation=1';
-              await launch(url);
-            }),
+            
             listtilefunc('About', Icons.info, ontap: () {
               showDialog(
                   context: context,
